@@ -19,4 +19,9 @@ describe('flipasg > Anagram', () => {
 
     expect(anagram(input)).toBe('c')
   });
+  test('should return all combinations for input "ab"', () => {
+    const input = 'ab';
+
+    expect(anagram(input)).toBe('ab\nba')
+  });
 });
