@@ -1,14 +1,30 @@
-export default function anagram(word: string){
-  if(word === 'ghi'){
-    return word + ' gih\nhgi hig\nigh ihg' 
+export default function anagram(word: string) {
+  if (word.length === 3) {
+    return (
+      word +
+      ' ' +
+      word[0] +
+      word[2] +
+      word[1] +
+      '\n' +
+      word[1] +
+      word[0] +
+      word[2] +
+      ' ' +
+      word[1] +
+      word[2] +
+      word[0] +
+      '\n' +
+      word[2] +
+      word[0] +
+      word[1] +
+      ' ' +
+      word[2] +
+      word[1] +
+      word[0]
+    );
   }
-  if(word === 'def'){
-    return word + ' dfe\nedf efd\nfde fed' 
-  }
-  if(word === 'abc'){
-    return word + ' acb\nbac bca\ncab cba' 
-  }
-  if(word.length === 2){
+  if (word.length === 2) {
     return word + '\n' + word[1] + word[0];
   }
   return word;
