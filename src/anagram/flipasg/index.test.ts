@@ -46,4 +46,10 @@ describe('flipasg > Anagram', () => {
 
     expect(anagram(input)).toBe('def dfe\nedf efd\nfde fed')
   });
+
+  test('should return all combinations for input "ghi"', () => {
+    const input = 'ghi';
+
+    expect(anagram(input)).toBe('ghi gih\nhgi hig\nigh ihg')
+  });
 });

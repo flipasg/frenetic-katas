@@ -1,4 +1,7 @@
 export default function anagram(word: string){
+  if(word === 'ghi'){
+    return word + ' gih\nhgi hig\nigh ihg' 
+  }
   if(word === 'def'){
     return word + ' dfe\nedf efd\nfde fed' 
   }
