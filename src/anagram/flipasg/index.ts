@@ -1,169 +1,180 @@
 export default function anagram(word: string) {
-  // if (word === 'biro') {
-  //   return 'biro bior brio broi boir bori\nibro ibor irbo irob iobr iorb\nrbio rboi ribo riob roib robi\nobir obri oibr oirb orbi orib';
+  // if (word.length === 4) {
+  //   return (
+  //     word[0] +
+  //     word[1] +
+  //     word[2] +
+  //     word[3] +
+  //     ' ' +
+  //     word[0] +
+  //     word[1] +
+  //     word[3] +
+  //     word[2] +
+  //     ' ' +
+  //     word[0] +
+  //     word[2] +
+  //     word[1] +
+  //     word[3] +
+  //     ' ' +
+  //     word[0] +
+  //     word[2] +
+  //     word[3] +
+  //     word[1] +
+  //     ' ' +
+  //     word[0] +
+  //     word[3] +
+  //     word[1] +
+  //     word[2] +
+  //     ' ' +
+  //     word[0] +
+  //     word[3] +
+  //     word[2] +
+  //     word[1] +
+  //     '\n' +
+  //     word[1] +
+  //     word[0] +
+  //     word[2] +
+  //     word[3] +
+  //     ' ' +
+  //     word[1] +
+  //     word[0] +
+  //     word[3] +
+  //     word[2] +
+  //     ' ' +
+  //     word[1] +
+  //     word[2] +
+  //     word[0] +
+  //     word[3] +
+  //     ' ' +
+  //     word[1] +
+  //     word[2] +
+  //     word[3] +
+  //     word[0] +
+  //     ' ' +
+  //     word[1] +
+  //     word[3] +
+  //     word[0] +
+  //     word[2] +
+  //     ' ' +
+  //     word[1] +
+  //     word[3] +
+  //     word[2] +
+  //     word[0] +
+  //     '\n' +
+  //     word[2] +
+  //     word[0] +
+  //     word[1] +
+  //     word[3] +
+  //     ' ' +
+  //     word[2] +
+  //     word[0] +
+  //     word[3] +
+  //     word[1] +
+  //     ' ' +
+  //     word[2] +
+  //     word[1] +
+  //     word[0] +
+  //     word[3] +
+  //     ' ' +
+  //     word[2] +
+  //     word[1] +
+  //     word[3] +
+  //     word[0] +
+  //     ' ' +
+  //     word[2] +
+  //     word[3] +
+  //     word[1] +
+  //     word[0] +
+  //     ' ' +
+  //     word[2] +
+  //     word[3] +
+  //     word[0] +
+  //     word[1] +
+  //     '\n' +
+  //     word[3] +
+  //     word[0] +
+  //     word[1] +
+  //     word[2] +
+  //     ' ' +
+  //     word[3] +
+  //     word[0] +
+  //     word[2] +
+  //     word[1] +
+  //     ' ' +
+  //     word[3] +
+  //     word[1] +
+  //     word[0] +
+  //     word[2] +
+  //     ' ' +
+  //     word[3] +
+  //     word[1] +
+  //     word[2] +
+  //     word[0] +
+  //     ' ' +
+  //     word[3] +
+  //     word[2] +
+  //     word[0] +
+  //     word[1] +
+  //     ' ' +
+  //     word[3] +
+  //     word[2] +
+  //     word[1] +
+  //     word[0]
+  //   );
   // }
-  // if (word === 'ijkl') {
-  //   return 'ijkl ijlk ikjl iklj iljk ilkj\njikl jilk jkil jkli jlik jlki\nkijl kilj kjil kjli klji klij\nlijk likj ljik ljki lkij lkji';
-  // }
-  // if (word === 'efgh') {
-  //   return 'efgh efhg egfh eghf ehfg ehgf\nfegh fehg fgeh fghe fheg fhge\ngefh gehf gfeh gfhe ghfe ghef\nhefg hegf hfeg hfge hgef hgfe';
-  // }
-  // if (word === 'abcd') {
-  //   return 'abcd abdc acbd acdb adbc adcb\nbacd badc bcad bcda bdac bdca\ncabd cadb cbad cbda cdba cdab\ndabc dacb dbac dbca dcab dcba';
-  // }
-  if (word.length === 4) {
-    return (
-      word[0] +
-      word[1] +
-      word[2] +
-      word[3] +
-      ' ' +
-      word[0] +
-      word[1] +
-      word[3] +
-      word[2] +
-      ' ' +
-      word[0] +
-      word[2] +
-      word[1] +
-      word[3] +
-      ' ' +
-      word[0] +
-      word[2] +
-      word[3] +
-      word[1] +
-      ' ' +
-      word[0] +
-      word[3] +
-      word[1] +
-      word[2] +
-      ' ' +
-      word[0] +
-      word[3] +
-      word[2] +
-      word[1] +
-      '\n' +
-      word[1] +
-      word[0] +
-      word[2] +
-      word[3] +
-      ' ' +
-      word[1] +
-      word[0] +
-      word[3] +
-      word[2] +
-      ' ' +
-      word[1] +
-      word[2] +
-      word[0] +
-      word[3] +
-      ' ' +
-      word[1] +
-      word[2] +
-      word[3] +
-      word[0] +
-      ' ' +
-      word[1] +
-      word[3] +
-      word[0] +
-      word[2] +
-      ' ' +
-      word[1] +
-      word[3] +
-      word[2] +
-      word[0] +
-      '\n' +
-      word[2] +
-      word[0] +
-      word[1] +
-      word[3] +
-      ' ' +
-      word[2] +
-      word[0] +
-      word[3] +
-      word[1] +
-      ' ' +
-      word[2] +
-      word[1] +
-      word[0] +
-      word[3] +
-      ' ' +
-      word[2] +
-      word[1] +
-      word[3] +
-      word[0] +
-      ' ' +
-      word[2] +
-      word[3] +
-      word[1] +
-      word[0] +
-      ' ' +
-      word[2] +
-      word[3] +
-      word[0] +
-      word[1] +
-      '\n' +
-      word[3] +
-      word[0] +
-      word[1] +
-      word[2] +
-      ' ' +
-      word[3] +
-      word[0] +
-      word[2] +
-      word[1] +
-      ' ' +
-      word[3] +
-      word[1] +
-      word[0] +
-      word[2] +
-      ' ' +
-      word[3] +
-      word[1] +
-      word[2] +
-      word[0] +
-      ' ' +
-      word[3] +
-      word[2] +
-      word[0] +
-      word[1] +
-      ' ' +
-      word[3] +
-      word[2] +
-      word[1] +
-      word[0]
-    );
-  }
 
-  if (word.length === 3) {
-    return (
-      word[0] +
-      word[1] +
-      word[2] +
-      ' ' +
-      word[0] +
-      word[2] +
-      word[1] +
-      '\n' +
-      word[1] +
-      word[0] +
-      word[2] +
-      ' ' +
-      word[1] +
-      word[2] +
-      word[0] +
-      '\n' +
-      word[2] +
-      word[0] +
-      word[1] +
-      ' ' +
-      word[2] +
-      word[1] +
-      word[0]
-    );
+  // if (word.length === 3) {
+  //   return (
+  //     word[0] +
+  //     word[1] +
+  //     word[2] +
+  //     ' ' +
+  //     word[0] +
+  //     word[2] +
+  //     word[1] +
+  //     '\n' +
+  //     word[1] +
+  //     word[0] +
+  //     word[2] +
+  //     ' ' +
+  //     word[1] +
+  //     word[2] +
+  //     word[0] +
+  //     '\n' +
+  //     word[2] +
+  //     word[0] +
+  //     word[1] +
+  //     ' ' +
+  //     word[2] +
+  //     word[1] +
+  //     word[0]
+  //   );
+  // }
+  // if (word.length === 2) {
+  //   return word[0] + word[1] + '\n' + word[1] + word[0];
+  // }
+
+  let allCombinations = '';
+  for (let i = 0; i < word.length; i++) {
+    const char = word[i];
+    const restOfChars = word.split('');
+    restOfChars.splice(i, 1);
+
+    let row = '';
+    for (let k = 0; k < restOfChars.length; k++) {
+      const otherChar = restOfChars[k];
+
+      const otherChars = [...restOfChars];
+      otherChars.splice(k, 1);
+
+      row += char + otherChar + otherChars.join('') + ' ';
+
+      if (restOfChars.length > 2) {
+        row += char + otherChar + [...otherChars].reverse().join('') + ' ';
+      }
+    }
+
+    allCombinations += row.substring(0, row.length - 1) + (i === word.length - 1 ? '' : '\n');
   }
-  if (word.length === 2) {
-    return word[0] + word[1] + '\n' + word[1] + word[0];
-  }
-  return word;
+  return allCombinations;
 }
