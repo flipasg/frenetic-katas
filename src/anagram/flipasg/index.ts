@@ -1,12 +1,6 @@
 export default function anagram(word: string){
-  if(word === 'cd'){
-    return word + '\ndc';
-  }
-  if(word === 'bc'){
-    return word + '\ncb';
-  }
-  if(word === 'ab'){
-    return word + '\nba';
+  if(word.length === 2){
+    return word + '\n' + word[1] + word[0];
   }
   return word;
 }
