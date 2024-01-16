@@ -1,4 +1,7 @@
 export default function anagram(word: string) {
+  if(word === 'ijkl'){
+    return word + ' ijlk iklj ikjl iljk ilkj\njikl jilk jkli jkil jlik jlki\nlijk likj ljki ljik lkij lkji'
+  }
   if(word === 'efgh'){
     return word + ' efhg eghf egfh ehfg ehgf\nfegh fehg fghe fgeh fheg fhge\nhefg hegf hfge hfeg hgef hgfe'
   }

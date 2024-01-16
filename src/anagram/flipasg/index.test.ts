@@ -64,4 +64,10 @@ describe('flipasg > Anagram', () => {
 
     expect(anagram(input)).toBe('efgh efhg eghf egfh ehfg ehgf\nfegh fehg fghe fgeh fheg fhge\nhefg hegf hfge hfeg hgef hgfe')
   });
+
+  test('should return all combinations for input "ijkl"', () => {
+    const input = 'ijkl';
+
+    expect(anagram(input)).toBe('ijkl ijlk iklj ikjl iljk ilkj\njikl jilk jkli jkil jlik jlki\nlijk likj ljki ljik lkij lkji')
+  });
 });
