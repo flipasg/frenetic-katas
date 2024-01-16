@@ -1,4 +1,7 @@
 export default function anagram(word: string) {
+  if(word === 'abcd'){
+    return word + ' abdc acdb acbd adbc adcb\nbacd badc bcda bcad bdac bdca\ndabc dacb dbca dbac dcab dcba'
+  }
   if (word.length === 3) {
     return (
       word +

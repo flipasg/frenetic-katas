@@ -52,4 +52,14 @@ describe('flipasg > Anagram', () => {
 
     expect(anagram(input)).toBe('ghi gih\nhgi hig\nigh ihg')
   });
+
+  test('should return all combinations for input "abcd"', () => {
+    const input = 'abcd';
+
+    // bacd badc bcda bcad bdac bdca
+    // cabd cadc cbda cbad cdab cdba
+    // dabc dacb dbca dbac dcab dcba
+
+    expect(anagram(input)).toBe('abcd abdc acdb acbd adbc adcb\nbacd badc bcda bcad bdac bdca\ndabc dacb dbca dbac dcab dcba')
+  });
 });
