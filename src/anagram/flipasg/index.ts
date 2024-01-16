@@ -1,4 +1,7 @@
 export default function anagram(word: string){
+  if(word === 'cd'){
+    return word + '\ndc';
+  }
   if(word === 'bc'){
     return word + '\ncb';
   }

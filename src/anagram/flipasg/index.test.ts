@@ -29,4 +29,9 @@ describe('flipasg > Anagram', () => {
 
     expect(anagram(input)).toBe('bc\ncb')
   });
+  test('should return all combinations for input "cd"', () => {
+    const input = 'cd';
+
+    expect(anagram(input)).toBe('cd\ndc')
+  });
 });
