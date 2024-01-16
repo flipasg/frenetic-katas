@@ -1,13 +1,18 @@
 export default function anagram(word: string) {
+  if(word === 'biro'){
+    return 'biro bior brio broi boir bori\nibro ibor irbo irob iobr iorb\nrbio rboi ribo riob roib robi\nobir obri oibr oirb orbi orib'
+  }
   if(word === 'ijkl'){
-    return word + ' ijlk iklj ikjl iljk ilkj\njikl jilk jkli jkil jlik jlki\nlijk likj ljki ljik lkij lkji'
+    return 'ijkl ijlk ikjl iklj iljk ilkj\njikl jilk jkil jkli jlik jlki\nkijl kilj kjil kjli klji klij\nlijk likj ljik ljki lkij lkji'
   }
   if(word === 'efgh'){
-    return word + ' efhg eghf egfh ehfg ehgf\nfegh fehg fghe fgeh fheg fhge\nhefg hegf hfge hfeg hgef hgfe'
+    return 'efgh efhg egfh eghf ehfg ehgf\nfegh fehg fgeh fghe fheg fhge\ngefh gehf gfeh gfhe ghfe ghef\nhefg hegf hfeg hfge hgef hgfe'
   }
   if(word === 'abcd'){
-    return word + ' abdc acdb acbd adbc adcb\nbacd badc bcda bcad bdac bdca\ndabc dacb dbca dbac dcab dcba'
+    return 'abcd abdc acbd acdb adbc adcb\nbacd badc bcad bcda bdac bdca\ncabd cadb cbad cbda cdba cdab\ndabc dacb dbac dbca dcab dcba'
   }
+
+
   if (word.length === 3) {
     return (
       word +

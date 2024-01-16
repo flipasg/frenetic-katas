@@ -56,18 +56,23 @@ describe('flipasg > Anagram', () => {
   test('should return all combinations for input "abcd"', () => {
     const input = 'abcd';
 
-    expect(anagram(input)).toBe('abcd abdc acdb acbd adbc adcb\nbacd badc bcda bcad bdac bdca\ndabc dacb dbca dbac dcab dcba')
+    expect(anagram(input)).toBe('abcd abdc acbd acdb adbc adcb\nbacd badc bcad bcda bdac bdca\ncabd cadb cbad cbda cdba cdab\ndabc dacb dbac dbca dcab dcba')
   });
 
   test('should return all combinations for input "efgh"', () => {
     const input = 'efgh';
 
-    expect(anagram(input)).toBe('efgh efhg eghf egfh ehfg ehgf\nfegh fehg fghe fgeh fheg fhge\nhefg hegf hfge hfeg hgef hgfe')
+    expect(anagram(input)).toBe('efgh efhg egfh eghf ehfg ehgf\nfegh fehg fgeh fghe fheg fhge\ngefh gehf gfeh gfhe ghfe ghef\nhefg hegf hfeg hfge hgef hgfe')
   });
 
   test('should return all combinations for input "ijkl"', () => {
     const input = 'ijkl';
 
-    expect(anagram(input)).toBe('ijkl ijlk iklj ikjl iljk ilkj\njikl jilk jkli jkil jlik jlki\nlijk likj ljki ljik lkij lkji')
+    expect(anagram(input)).toBe('ijkl ijlk ikjl iklj iljk ilkj\njikl jilk jkil jkli jlik jlki\nkijl kilj kjil kjli klji klij\nlijk likj ljik ljki lkij lkji')
+  });
+  test('should return all combinations for input "biro"', () => {
+    const input = 'biro';
+
+    expect(anagram(input)).toBe('biro bior brio broi boir bori\nibro ibor irbo irob iobr iorb\nrbio rboi ribo riob roib robi\nobir obri oibr oirb orbi orib')
   });
 });
