@@ -40,4 +40,10 @@ describe('flipasg > Anagram', () => {
 
     expect(anagram(input)).toBe('abc acb\nbac bca\ncab cba')
   });
+
+  test('should return all combinations for input "def"', () => {
+    const input = 'def';
+
+    expect(anagram(input)).toBe('def dfe\nedf efd\nfde fed')
+  });
 });

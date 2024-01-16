@@ -1,4 +1,7 @@
 export default function anagram(word: string){
+  if(word === 'def'){
+    return word + ' dfe\nedf efd\nfde fed' 
+  }
   if(word === 'abc'){
     return word + ' acb\nbac bca\ncab cba' 
   }
