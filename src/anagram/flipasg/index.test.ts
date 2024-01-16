@@ -7,4 +7,10 @@ describe('flipasg > Anagram', () => {
 
     expect(anagram(input)).toBe('a')
   });
+
+  test('should return the same string if input is "b"', () => {
+    const input = 'b';
+
+    expect(anagram(input)).toBe('b')
+  });
 });
