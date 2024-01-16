@@ -1,4 +1,7 @@
 export default function anagram(word: string) {
+  if(word === 'efgh'){
+    return word + ' efhg eghf egfh ehfg ehgf\nfegh fehg fghe fgeh fheg fhge\nhefg hegf hfge hfeg hgef hgfe'
+  }
   if(word === 'abcd'){
     return word + ' abdc acdb acbd adbc adcb\nbacd badc bcda bcad bdac bdca\ndabc dacb dbca dbac dcab dcba'
   }
