@@ -77,5 +77,9 @@ describe('flipasg > Anagram', () => {
     expect(anagram(input)).toBe('biro bior brio broi boir bori ibro ibor irbo irob iobr iorb rbio rboi ribo riob robi roib obir obri oibr oirb orbi orib')
   });
   
+  test('should return all combinations for input "ruben"', () => {
+    const input = 'ruben';
 
+    expect(anagram(input)).toBe('ruben rubne ruebn ruenb runbe runeb rbuen rbune rbeun rbenu rbnue rbneu reubn reunb rebun rebnu renub renbu rnube rnueb rnbue rnbeu rneub rnebu urben urbne urebn urenb urnbe urneb ubren ubrne ubern ubenr ubnre ubner uerbn uernb uebrn uebnr uenrb uenbr unrbe unreb unbre unber unerb unebr bruen brune breun brenu brnue brneu buren burne buern buenr bunre buner berun bernu beurn beunr benru benur bnrue bnreu bnure bnuer bneru bneur erubn erunb erbun erbnu ernub ernbu eurbn eurnb eubrn eubnr eunrb eunbr ebrun ebrnu eburn ebunr ebnru ebnur enrub enrbu enurb enubr enbru enbur nrube nrueb nrbue nrbeu nreub nrebu nurbe nureb nubre nuber nuerb nuebr nbrue nbreu nbure nbuer nberu nbeur nerub nerbu neurb neubr nebru nebur')
+  });
 });
