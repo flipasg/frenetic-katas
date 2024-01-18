@@ -92,4 +92,17 @@ describe('flipasg > Anagram', () => {
       'ruben rubne ruebn ruenb runbe runeb rbuen rbune rbeun rbenu rbnue rbneu reubn reunb rebun rebnu renub renbu rnube rnueb rnbue rnbeu rneub rnebu urben urbne urebn urenb urnbe urneb ubren ubrne ubern ubenr ubnre ubner uerbn uernb uebrn uebnr uenrb uenbr unrbe unreb unbre unber unerb unebr bruen brune breun brenu brnue brneu buren burne buern buenr bunre buner berun bernu beurn beunr benru benur bnrue bnreu bnure bnuer bneru bneur erubn erunb erbun erbnu ernub ernbu eurbn eurnb eubrn eubnr eunrb eunbr ebrun ebrnu eburn ebunr ebnru ebnur enrub enrbu enurb enubr enbru enbur nrube nrueb nrbue nrbeu nreub nrebu nurbe nureb nubre nuber nuerb nuebr nbrue nbreu nbure nbuer nberu nbeur nerub nerbu neurb neubr nebru nebur'
     );
   });
+
+
+  test('should return all combinations for input ""', () => {
+    const input = '';
+
+    expect(anagram(input).join(' ')).toBe('');
+  });
+
+  test('should return all combinations for input "4lt0"', () => {
+    const input = '4lt0';
+
+    expect(anagram(input).join(' ')).toBe('4lt0 4l0t 4tl0 4t0l 40lt 40tl l4t0 l40t lt40 lt04 l04t l0t4 t4l0 t40l tl40 tl04 t04l t0l4 04lt 04tl 0l4t 0lt4 0t4l 0tl4');
+  });
 });
