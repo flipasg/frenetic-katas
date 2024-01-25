@@ -1,9 +1,13 @@
 export default function arabicToRomanic(arabicNumber: number, res = '') {
+  if (arabicNumber === 0) {
+    return res;
+  }
+
   const ARABIC_ROMANIC: Record<number, string> = {
     1: 'I',
     5: 'V',
     10: 'X',
-    50: 'L'
+    50: 'L',
   };
 
   if (ARABIC_ROMANIC[arabicNumber]) {
@@ -22,8 +26,10 @@ export default function arabicToRomanic(arabicNumber: number, res = '') {
   const roman = Object.values(ARABIC_ROMANIC);
   for (let index = coco.length - 1; index >= 0; index--) {
     const element = +coco[index];
-    if (element < arabicNumber) {
+    if (element <= arabicNumber) {
       return res + arabicToRomanic(arabicNumber - element, roman[index]);
+    } else if (arabicNumber === element - +coco[index - 1]) {
+      return res + roman[index - 1] + roman[index];
     }
   }
 }
