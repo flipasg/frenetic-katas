@@ -8,6 +8,7 @@ export default function arabicToRomanic(arabicNumber: number, res = '') {
     5: 'V',
     10: 'X',
     50: 'L',
+    100: 'C',
   };
 
   if (ARABIC_ROMANIC[arabicNumber]) {
@@ -30,6 +31,8 @@ export default function arabicToRomanic(arabicNumber: number, res = '') {
       return res + arabicToRomanic(arabicNumber - element, roman[index]);
     } else if (arabicNumber === element - +coco[index - 1]) {
       return res + roman[index - 1] + roman[index];
+    } else if (arabicNumber === element - +coco[index - 2]) {
+      return res + roman[index - 2] + roman[index];
     }
   }
 }

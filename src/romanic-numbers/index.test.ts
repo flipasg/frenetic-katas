@@ -90,4 +90,24 @@ describe('Romanic Numbers', () => {
     expect(arabicToRomanic(40)).toBe('XL');
   });
 
+  test('should return L if the input is 50', async () => {
+    expect(arabicToRomanic(50)).toBe('L');
+  });
+
+  test('should return LX if the input is 60', async () => {
+    expect(arabicToRomanic(60)).toBe('LX');
+  });
+
+  test('should return LXX if the input is 70', async () => {
+    expect(arabicToRomanic(70)).toBe('LXX');
+  });
+
+  test('should return LXXX if the input is 80', async () => {
+    expect(arabicToRomanic(80)).toBe('LXXX');
+  });
+
+  test('should return XC if the input is 90', async () => {
+    expect(arabicToRomanic(90)).toBe('XC');
+  });
+
 });
