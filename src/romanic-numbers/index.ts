@@ -2,10 +2,19 @@ export default function arabicToRomanic(arabicNumber: number) {
   const ARABIC_ROMANIC = {
     1: 'I',
     5: 'V',
+    10: 'X',
   };
 
   if(ARABIC_ROMANIC[arabicNumber]){
     return ARABIC_ROMANIC[arabicNumber];
+  }
+
+  if(arabicNumber === 4){
+    return 'IV';
+  }
+
+  if(arabicNumber === 9){
+    return 'IX';
   }
 
   let romanicNumber = '';
@@ -20,8 +29,6 @@ export default function arabicToRomanic(arabicNumber: number) {
     }
   }
 
-  if(romanicNumber.length === 4){
-    return 'IV';
-  }
+
   return romanicNumber;
 }
