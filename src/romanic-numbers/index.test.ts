@@ -53,5 +53,10 @@ describe('Romanic Numbers', () => {
   test('should return XIII if the input is 13', async () => {
     expect(arabicToRomanic(13)).toBe('XIII');
   });
+
+  test('should return XIV if the input is 14', async () => {
+    expect(arabicToRomanic(14)).toBe('XIV');
+  });
   
+
 });

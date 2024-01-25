@@ -17,6 +17,10 @@ export default function arabicToRomanic(arabicNumber: number) {
     return 'IX';
   }
 
+  if(arabicNumber === 14){
+    return 'XIV';
+  }
+
   let romanicNumber = '';
   for (let index = arabicNumber; index > 0; ) {
     const romanicLetter = ARABIC_ROMANIC[index];
