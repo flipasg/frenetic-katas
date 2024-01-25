@@ -9,6 +9,7 @@ export default function arabicToRomanic(arabicNumber: number, res = '') {
     10: 'X',
     50: 'L',
     100: 'C',
+    500: 'D'
   };
 
   if (ARABIC_ROMANIC[arabicNumber]) {

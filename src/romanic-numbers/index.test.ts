@@ -110,4 +110,24 @@ describe('Romanic Numbers', () => {
     expect(arabicToRomanic(90)).toBe('XC');
   });
 
+  test('should return C if the input is 100', async () => {
+    expect(arabicToRomanic(100)).toBe('C');
+  });
+
+  test('should return CC if the input is 200', async () => {
+    expect(arabicToRomanic(200)).toBe('CC');
+  });
+
+  test('should return CCC if the input is 300', async () => {
+    expect(arabicToRomanic(300)).toBe('CCC');
+  });
+
+  test('should return CD if the input is 400', async () => {
+    expect(arabicToRomanic(400)).toBe('CD');
+  });
+
+  test('should return D if the input is 500', async () => {
+    expect(arabicToRomanic(500)).toBe('D');
+  });
+
 });
