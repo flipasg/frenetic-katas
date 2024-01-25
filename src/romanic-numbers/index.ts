@@ -1,38 +1,29 @@
-export default function arabicToRomanic(arabicNumber: number) {
-  const ARABIC_ROMANIC = {
+export default function arabicToRomanic(arabicNumber: number, res = '') {
+  const ARABIC_ROMANIC: Record<number, string> = {
     1: 'I',
     5: 'V',
     10: 'X',
+    50: 'L'
   };
 
-  if(ARABIC_ROMANIC[arabicNumber]){
-    return ARABIC_ROMANIC[arabicNumber];
+  if (ARABIC_ROMANIC[arabicNumber]) {
+    return res + ARABIC_ROMANIC[arabicNumber];
   }
 
-  if(arabicNumber === 4){
-    return 'IV';
+  if (ARABIC_ROMANIC[arabicNumber + 1]) {
+    return (
+      res +
+      arabicToRomanic(Math.abs(arabicNumber - (arabicNumber + 1))) +
+      ARABIC_ROMANIC[arabicNumber + 1]
+    );
   }
 
-  if(arabicNumber === 9){
-    return 'IX';
-  }
-
-  if(arabicNumber === 14){
-    return 'XIV';
-  }
-
-  let romanicNumber = '';
-  for (let index = arabicNumber; index > 0; ) {
-    const romanicLetter = ARABIC_ROMANIC[index];
-    if(romanicLetter){
-      romanicNumber = ARABIC_ROMANIC[index] + romanicNumber;
-      index-=index;
-    } else {
-      romanicNumber += ARABIC_ROMANIC[1];
-      index--;
+  const coco = Object.keys(ARABIC_ROMANIC);
+  const roman = Object.values(ARABIC_ROMANIC);
+  for (let index = coco.length - 1; index >= 0; index--) {
+    const element = +coco[index];
+    if (element < arabicNumber) {
+      return res + arabicToRomanic(arabicNumber - element, roman[index]);
     }
   }
-
-
-  return romanicNumber;
 }
