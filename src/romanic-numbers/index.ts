@@ -1,9 +1,8 @@
 export default function arabicToRomanic(arabicNumber: number) {
-  if(arabicNumber === 3){
-    return 'III';
+  let romanicNumber = '';
+  for (let index = 0; index < arabicNumber; index++) {
+    romanicNumber += 'I';
+    
   }
-  if (arabicNumber === 2) {
-    return 'II';
-  }
-  return 'I';
+  return romanicNumber;
 }
